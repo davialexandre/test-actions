@@ -1,0 +1,22 @@
+name: Main
+on: push
+
+jobs:
+    tests:
+        runs-on: ubuntu-latest
+        container: alpine:latest
+
+        steps:
+
+        - name: Create folder
+          run: mkdir -p /var/www
+        
+        - uses: actions/checkout@v2
+          with:
+            path: /var/www
+
+        - name: Show files
+          run: ls -la /var/www
+            
+
+
