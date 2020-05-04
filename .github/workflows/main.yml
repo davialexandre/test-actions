@@ -7,7 +7,7 @@ jobs:
         container: 
             image: alpine:latest
             volumes:
-                - .:/var/www
+                - $PWD:/var/www
 
         steps:
         
