@@ -4,16 +4,16 @@ on: push
 jobs:
     tests:
         runs-on: ubuntu-latest
-        container: alpine:latest
+        container: 
+            image: alpine:latest
+            volumes:
+                - .:/var/www
 
         steps:
-
-        - name: Create folder
-          run: mkdir -p /var/www
         
         - uses: actions/checkout@v2
           with:
-            path: /var/www
+            path: ext
 
         - name: Show files
           run: ls -la /var/www
