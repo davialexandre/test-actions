@@ -7,7 +7,7 @@ jobs:
         container: 
             image: alpine:latest
             volumes:
-                - $PWD:/var/www
+                - ${{ github.workspace }}:/var/www
 
         steps:
         
