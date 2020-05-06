@@ -15,7 +15,6 @@ jobs:
 
         - name: Show files
           run: |
-            ls -la /var/www
             free -m
             cat /proc/cpuinfo
             df -h
