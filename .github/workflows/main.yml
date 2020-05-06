@@ -4,10 +4,10 @@ on: push
 jobs:
     tests:
         runs-on: ubuntu-latest
-#        container: 
-#            image: alpine:latest
-#            volumes:
-#                - ${{ github.workspace }}:/var/www
+        container: 
+            image: alpine:latest
+            volumes:
+                - ${{ github.workspace }}:/var/www
 
         steps:
         
@@ -18,6 +18,7 @@ jobs:
             free -m
             cat /proc/cpuinfo
             df -h
+            cat /sys/fs/cgroup/memory/memory.limit_in_bytes
 
             
 
