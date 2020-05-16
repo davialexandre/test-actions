@@ -17,7 +17,7 @@ jobs:
 
         - name: First step 
           run: |
-            echo $0
+            ps -p $$
             env
             export MYVAR=10
             MY_ENV_VAR=321
