@@ -15,7 +15,6 @@ jobs:
         - name: First step 
           shell: bash
           run: |
-#            env
             git status
             git fetch origin/$GITHUB_BASE_REF
             echo "==============================="
