@@ -17,4 +17,4 @@ jobs:
           run: |
             env
             git status
-            git diff origin/$GITHUB_BASE_REF --name-only -r --
+            git diff origin/$GITHUB_BASE_REF --name-only -- **/*.css **/*.scss
