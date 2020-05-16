@@ -17,12 +17,16 @@ jobs:
 
         - name: First step 
           run: |
+            echo $0
             env
             export MYVAR=10
             MY_ENV_VAR=321
+            echo "12312" > my_file
 
         - name: Second step
-          run: env
+          run: |
+            env
+            cat my_file
             
 
 
