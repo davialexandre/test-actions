@@ -6,7 +6,6 @@ env:
 jobs:
     tests:
         runs-on: ubuntu-latest
-        container: php:7.2.30 
 
         steps:
         
@@ -15,16 +14,7 @@ jobs:
         - name: First step 
           shell: bash
           run: |
-            echo $SHELL
             env
-            export MYVAR=10
-            MY_ENV_VAR=321
-            echo "12312" > my_file
-
-        - name: Second step
-          run: |
-            env
-            cat my_file
-            
-
-
+            echo ${{ github.ref }}
+            git status
+            git diff origin/${{ github.ref }}
