@@ -16,6 +16,5 @@ jobs:
           shell: bash
           run: |
             env
-#            echo ${{ github.ref }}
-#            git status
-#            git diff origin/${{ github.ref }}
+            git status
+            git diff origin/$GITHUB_BASE_REF --name-only -r --
