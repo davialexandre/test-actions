@@ -6,10 +6,10 @@ env:
 jobs:
     tests:
         runs-on: ubuntu-latest
-#        container: 
-#            image: alpine:latest
-#            volumes:
-#                - ${{ github.workspace }}:/var/www
+        container: 
+            image: alpine:latest
+            volumes:
+                - ${{ github.workspace }}:/var/www
 
         steps:
         
