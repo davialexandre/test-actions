@@ -15,6 +15,11 @@ jobs:
         - name: First step 
           shell: bash
           run: |
-            env
+#            env
             git status
+            git fetch origin/$GITHUB_BASE_REF
+            echo "==============================="
+            git remote -v
+            echo "==============================="
+            git branch -a
             git diff origin/$GITHUB_BASE_REF --name-only -- **/*.css **/*.scss
