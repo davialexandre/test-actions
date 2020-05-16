@@ -6,7 +6,7 @@ env:
 jobs:
     tests:
         runs-on: ubuntu-latest
-        container: php:7.20.30 
+        container: php:7.2.30 
 
         steps:
         
