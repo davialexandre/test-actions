@@ -1,5 +1,6 @@
 name: Main
-on: push
+on: pull_request
+
 env:
     MY_ENV_VAR: 321
 
@@ -15,6 +16,6 @@ jobs:
           shell: bash
           run: |
             env
-            echo ${{ github.ref }}
-            git status
-            git diff origin/${{ github.ref }}
+#            echo ${{ github.ref }}
+#            git status
+#            git diff origin/${{ github.ref }}
