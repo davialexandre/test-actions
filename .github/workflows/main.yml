@@ -18,5 +18,5 @@ jobs:
         - name: First step 
           run: |
             files=$(git diff origin/master --name-only -- '*.php')
-            [ -n "$files" ] && echo $files
+#            [ -n "$files" ] && echo $files
             
