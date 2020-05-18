@@ -11,14 +11,12 @@ jobs:
         steps:
         
         - uses: actions/checkout@v2
+        
+        - name: fetch master
+          run: git fetch origin
 
         - name: First step 
-          shell: bash
           run: |
-            git status
-            git fetch origin $GITHUB_BASE_REF
-            echo "==============================="
-            git remote -v
-            echo "==============================="
-            git branch -a
-            git diff origin/$GITHUB_BASE_REF --name-only -- **/*.css **/*.scss
+            files=$(git diff origin/master --name-only -- '*.php')
+            [ -n "$files" ] && echo $files
+            
