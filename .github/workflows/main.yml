@@ -16,7 +16,8 @@ jobs:
           run: git fetch origin
 
         - name: First step 
+          shell: bash
           run: |
             files=$(git diff origin/master --name-only -- '*.php')
-#            [ -n "$files" ] && echo $files
+            [ -n "$files" ] && echo $files
             
