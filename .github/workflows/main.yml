@@ -16,10 +16,10 @@ jobs:
           run: git fetch origin
 
         - name: First step 
-          run: git diff origin/master --name-only -- '*.php' | xargs ./my-script
+          run: git diff origin/master --name-only -- '*.php' | xargs -r ./my-script
         
         - name: Second step
-          run: git diff origin/master --name-only -- '*.scss' '*.css' | xargs ./my-script
+          run: git diff origin/master --name-only -- '*.scss' '*.css' | xargs -r ./my-script
 
         - name: Third step
-          run: git diff origin/master --name-only -- '*.js' | xargs ./my-script
+          run: git diff origin/master --name-only -- '*.js' | xargs -r ./my-script
