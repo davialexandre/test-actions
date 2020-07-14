@@ -12,10 +12,12 @@ jobs:
         
         - uses: actions/checkout@v2
 
+        - name: First dsa 
+          run: |
+            docker run --rm -i hadolint/hadolint
         - name: First step 
           shell: bash
           run: |
-            hub
             cat $HOME/.config/hub
             w
             echo $SHELL
